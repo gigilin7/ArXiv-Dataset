@@ -22,7 +22,7 @@ ssh ubuntu@ec2-3-137-149-71.us-east-2.compute.amazonaws.com -i llm-vm.pem
 <br>https://info.arxiv.org/help/bulk_data_s3.html#src
 
 3. **Using arxiv-tools**
-<br>Downloading according to README does not require slurm, but the downloaded data will be less (the reason is unknown)
+<br>Downloading according to README does not require slurm, but the downloaded data will be less ( the reason is unknown )
 <br>https://github.com/armancohan/arxiv-tools
 
 ## Install slurm + download arXiv steps
@@ -170,7 +170,7 @@ bash scripts/arxiv-kickoff-download.sh
 <img src="https://github.com/gigilin7/ArXiv-Dataset/assets/43805264/bc30ce40-ff8c-4ec8-a1f5-d506b277a010" width="500" />
 
 * Download completed
-<br>After downloading, it will be a bunch of tar, and after decompression, it will be a bunch of gz (some pdf will be mixed in, and the pdf will be filtered out later without data cleaning)
+<br>After downloading, it will be a bunch of tar, and after decompression, it will be a bunch of gz ( some pdf will be mixed in, and the pdf will be filtered out later without data cleaning )
 
 <img src="https://github.com/gigilin7/ArXiv-Dataset/assets/43805264/35cfd29e-8c32-41cb-8be4-dadfa3f6f67c" width="250" /> <img src="https://github.com/gigilin7/ArXiv-Dataset/assets/43805264/759817aa-53db-4949-898d-99bc17f05360" width="150" />
 
@@ -188,9 +188,9 @@ bash scripts/arxiv-kickoff-cleaning.sh
      * Conclusion: no suitable
 
 3. **Write it myself** ✔
-     * Idea: Use regex to find out the required content after observing the paper content (not including references)
+     * Idea: Use regex to find out the required content after observing the paper content ( not including references )
      * Method: divided into category, title, author, abstract, section (section is further divided into title, text, subsection)
-     * Execution time: about 7 hours (more than 2 million articles)
+     * Execution time: about 7 hours ( more than 2 million papers )
      * ⚠ The downloaded paper is a gz file, the encoding must use `ISO-8859-1` and `utf-8` is not available
 
 * The result is as following
@@ -235,7 +235,7 @@ python3 clean_data.py
 ```
 
 ## Data Filter
-Almost every paper has a category displayed on the official website, which will appear in the file name (exception: some papers will not have a category, the reason is unknown)
+Almost every paper has a category displayed on the official website, which will appear in the file name ( exception: some papers will not have a category, the reason is unknown )
 <br>https://arxiv.org/category_taxonomy
 
 1. Filter out papers related to electricity
