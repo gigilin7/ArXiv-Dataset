@@ -181,7 +181,7 @@ The downloaded paper will be in latex format and should be saved in json format
 bash scripts/arxiv-kickoff-cleaning.sh
 `
 
-     * There is no cleaning after execution, I want to use arxiv_cleaner.py directly ( arxiv_cleaner.py is the code for cleaning data by RedPajama)
+     * There is no cleaning after execution, so I try to use arxiv_cleaner.py directly ( arxiv_cleaner.py is the code for cleaning data by RedPajama)
      * Conclusion: It will be cleaned up too much, and the content such as title, author, abstract, etc. will be cleared
 
 2. **Check online to see if there are any packages or codes available**
