@@ -1,4 +1,4 @@
-# ArXiv dataset download and preprocessing
+# ArXiv dataset downloading and preprocessing
 😊 [中文說明](https://hackmd.io/@7111056013/SyxoXIX32)
 
 ## Task
