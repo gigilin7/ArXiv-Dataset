@@ -330,7 +330,7 @@ python3 merge_json.py
 
 Someone organized the ArXiv data set ( json ), but it only contains the following items, and there is no full text
 
-* The format is as follows
+* The format is as following
 
 ```json
 {
