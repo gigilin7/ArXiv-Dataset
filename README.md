@@ -253,48 +253,52 @@ Almost every paper has a category displayed on the official website, which will 
 python3 count_token.py
 ```
      
-* Total tokens: `1079984905` ( "category": `233005`, "title": `1081319`, "author": `1064310`, "abstract": `13022915`, "section": `1064583356` )
+* Total tokens: `1080476015` ( "id": `491110`, "category": `233005`, "title": `1081319`, "author": `1064310`, "abstract": `13022915`, "section": `1064583356` )
 
 * The format is as following
 
 ```json
 {
-    "each_file_token": [
+    "each_file_token"： [
         {
-            "file": "physics0610057.json",
-            "category": 1,
-            "title": 19,
-            "author": 5,
-            "abstract": 453,
-            "section": 22435
+            "file"： "physics0610057.json",
+            "id": 4,
+            "category"： 1,
+            "title"： 19,
+            "author"： 5,
+            "abstract"： 453,
+            "section"： 22435
         },
         {
-            "file": "cond-mat0001001.json",
-            "category": 3,
-            "title": 12,
-            "author": 3,
-            "abstract": 240,
-            "section": 14532
+            "file"： "cond-mat0001001.json",
+            "id": 6,
+            "category"： 3,
+            "title"： 12,
+            "author"： 3,
+            "abstract"： 240,
+            "section"： 14532
         },
         {
-            "file": "cond-mat0608474.json",
-            "category": 3,
-            "title": 10,
-            "author": 5,
-            "abstract": 118,
-            "section": 5260
+            "file"： "cond-mat0608474.json",
+            "id": 6,
+            "category"： 3,
+            "title"： 10,
+            "author"： 5,
+            "abstract"： 118,
+            "section"： 5260
         },
     ],
     "each_file_token_total": {
-        "category": 7,
-        "title": 41,
-        "author": 13,
-        "abstract": 811,
-        "section": 42227
+        "id": 16,
+        "category"： 7,
+        "title"： 41,
+        "author"： 13,
+        "abstract"： 811,
+        "section"： 42227
     },
     "total": {
-        "file": 3,
-        "token": 43099
+        "file"： 3,
+        "token"： 43115
     }
 }
 ```
@@ -303,8 +307,22 @@ python3 count_token.py
 
 * There are more than `2 million` arXiv papers (without preprocessing): `3.2T` in total
 * There are more than `2 million` arXiv papers (pre-processed): `115G` in total
-* There are more than `80,000` arXiv papers related to electricity (pre-processed): `3.2G` in total
+* There are more than `80,000` arXiv papers related to electricity (pre-processed): `3.3G` in total
 
+
+## Merge json files
+Merge the json files that filter out more than 80,000 papers related to electricity into one jsonl file
+
+* Run the following command to merge json files into one jsonl file:
+```
+python3 merge_json.py
+```
+
+* The format is as following
+```jsonl
+{"id": "cond-mat0002097", "category": "cond-mat", "title": "Charge localization and phonon spectra in hole doped LaNiO", "author": "R. J. McQueeney, A. R. Bishop, and Ya-Sha Yi", "abstract": "The in-plane oxygen vibrations in La$_{2}$NiO$_{4}$ are investigated for \nseveral hole-doping concentrations both theoretically and experimentally via \ninelastic neutron scattering.  Using an inhomogeneous Hartree-Fock plus RPA \nnumerical method in a two-dimensional Peierls-Hubbard model, it is\nfound that the doping induces stripe ordering of localized charges,\nand that the strong electron-lattice coupling causes the in-plane \noxygen modes to split into two subbands. This result\nagrees with the phonon band splitting observed by inelastic neutron \nscattering in La$_{2-x}$Sr$_{x}$NiO$_{4}$.\nPredictions of strong electron-lattice coupling in La$_{2}$NiO$_{4}$,\nthe proximity of both oxygen-centered and nickel-centered charge\nordering, and the relation between charged stripe ordering and the\nsplitting of the in-plane phonon band upon doping are emphasized.", "section": [{"title": "Appendixes", "text": "", "subsection": []}]}
+{"id": "cond-mat0004401", "category": "cond-mat", "title": "Particle dynamics in sheared granular matter", "author": "W. Losert, L. Bocquet,, T.C. Lubensky, \nand J.P. Gollub,", "abstract": "The particle dynamics and shear forces of granular\nmatter in a Couette geometry are determined experimentally.  \nThe normalized tangential velocity $V(y)$ declines strongly with distance\n$y$ from the moving wall,\nindependent of the shear rate and of the shear dynamics.\nLocal RMS velocity fluctuations \n$\\delta V(y)$\nscale with the local velocity gradient to the power $0.4 \\pm 0.05$. \nThese results agree with a locally Newtonian, \ncontinuum model, where the granular medium is assumed to behave as a \nliquid with a local temperature $\\delta V(y)^2$ and density dependent\nviscosity.", "section": [{"title": "Acknowledgments", "text": "We thank A. Liu, H. Jaeger and C. Bizon for helpful discussions.\\nPart of this work was supported by the National Science Foundation under \\nGrant DMR-9704301", "subsection": []}]}
+```
 
 ## Additional information
 **ArXiv metadata set**
