@@ -259,46 +259,46 @@ python3 count_token.py
 
 ```json
 {
-    "each_file_token"： [
+    "each_file_token": [
         {
-            "file"： "physics0610057.json",
+            "file": "physics0610057.json",
             "id": 4,
-            "category"： 1,
-            "title"： 19,
-            "author"： 5,
-            "abstract"： 453,
-            "section"： 22435
+            "category": 1,
+            "title": 19,
+            "author": 5,
+            "abstract": 453,
+            "section": 22435
         },
         {
-            "file"： "cond-mat0001001.json",
+            "file": "cond-mat0001001.json",
             "id": 6,
-            "category"： 3,
-            "title"： 12,
-            "author"： 3,
-            "abstract"： 240,
-            "section"： 14532
+            "category": 3,
+            "title": 12,
+            "author": 3,
+            "abstract": 240,
+            "section": 14532
         },
         {
-            "file"： "cond-mat0608474.json",
+            "file": "cond-mat0608474.json",
             "id": 6,
-            "category"： 3,
-            "title"： 10,
-            "author"： 5,
-            "abstract"： 118,
-            "section"： 5260
+            "category": 3,
+            "title": 10,
+            "author": 5,
+            "abstract": 118,
+            "section": 5260
         },
     ],
     "each_file_token_total": {
         "id": 16,
-        "category"： 7,
-        "title"： 41,
-        "author"： 13,
-        "abstract"： 811,
-        "section"： 42227
+        "category": 7,
+        "title": 41,
+        "author": 13,
+        "abstract": 811,
+        "section": 42227
     },
     "total": {
-        "file"： 3,
-        "token"： 43115
+        "file": 3,
+        "token": 43115
     }
 }
 ```
