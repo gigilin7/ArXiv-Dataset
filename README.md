@@ -323,6 +323,12 @@ python3 merge_json.py
 {"id": "cond-mat0002097", "category": "cond-mat", "title": "Charge localization and phonon spectra in hole doped LaNiO", "author": "R. J. McQueeney, A. R. Bishop, and Ya-Sha Yi", "abstract": "The in-plane oxygen vibrations in La$_{2}$NiO$_{4}$ are investigated for \nseveral hole-doping concentrations both theoretically and experimentally via \ninelastic neutron scattering.  Using an inhomogeneous Hartree-Fock plus RPA \nnumerical method in a two-dimensional Peierls-Hubbard model, it is\nfound that the doping induces stripe ordering of localized charges,\nand that the strong electron-lattice coupling causes the in-plane \noxygen modes to split into two subbands. This result\nagrees with the phonon band splitting observed by inelastic neutron \nscattering in La$_{2-x}$Sr$_{x}$NiO$_{4}$.\nPredictions of strong electron-lattice coupling in La$_{2}$NiO$_{4}$,\nthe proximity of both oxygen-centered and nickel-centered charge\nordering, and the relation between charged stripe ordering and the\nsplitting of the in-plane phonon band upon doping are emphasized.", "section": [{"title": "Appendixes", "text": "", "subsection": []}]}
 {"id": "cond-mat0004401", "category": "cond-mat", "title": "Particle dynamics in sheared granular matter", "author": "W. Losert, L. Bocquet,, T.C. Lubensky, \nand J.P. Gollub,", "abstract": "The particle dynamics and shear forces of granular\nmatter in a Couette geometry are determined experimentally.  \nThe normalized tangential velocity $V(y)$ declines strongly with distance\n$y$ from the moving wall,\nindependent of the shear rate and of the shear dynamics.\nLocal RMS velocity fluctuations \n$\\delta V(y)$\nscale with the local velocity gradient to the power $0.4 \\pm 0.05$. \nThese results agree with a locally Newtonian, \ncontinuum model, where the granular medium is assumed to behave as a \nliquid with a local temperature $\\delta V(y)^2$ and density dependent\nviscosity.", "section": [{"title": "Acknowledgments", "text": "We thank A. Liu, H. Jaeger and C. Bizon for helpful discussions.\\nPart of this work was supported by the National Science Foundation under \\nGrant DMR-9704301", "subsection": []}]}
 ```
+<br>
+
+>**⚠ It is normal for some data fields to be blank. The reasons are as followIing:**
+>1. A small number of papers are formatted inconsistently, so this information is not available
+>2. The paper does not have information in this field<br><br>
+>**😊 Welcome to discuss with me how to solve the problem of inconsistent format 😊**
 
 ## Additional information
 **ArXiv metadata set**
@@ -334,15 +340,15 @@ Someone organized the ArXiv data set ( json ), but it only contains the followin
 
 ```json
 {
-    "id": ArXiv ID,
-    "submitter": 論文是誰提交的,
-    "authors": 論文作者,
-    "title": 論文標題,
-    "comments": 附加信息，例如頁數和數字,
-    "journal-ref": 有關該論文發表的期刊的信息,
-    "doi": https://www.doi.org,
-    "abstract": 論文摘要,
-    "categories": ArXiv系統中的類別/標籤,
-    "versions": 版本歷史,
+    "id": "ArXiv ID"
+    "submitter": "Who submitted the paper"
+    "authors": "Authors of the paper"
+    "title": "Title of the paper"
+    "comments": "Additional info, such as number of pages and figures"
+    "journal-ref": "Information about the journal the paper was published in"
+    "doi": "https://www.doi.org"
+    "abstract": "The abstract of the paper"
+    "categories": "Categories / tags in the ArXiv system"
+    "versions": "A version history"
 }
 ```
