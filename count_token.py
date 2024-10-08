@@ -11,14 +11,16 @@ def ele_filter(src_folder, dest_folder):
 
     for root, _, files in os.walk(src_folder):
         for file in files:
-            if file.endswith(".json") and ("eess" in file or "cond-mat" in file or "physics" in file):
+            if file.endswith(".json") and (
+                "eess" in file or "cond-mat" in file or "physics" in file
+            ):
                 src_path = os.path.join(root, file)
                 dst_path = os.path.join(dest_folder, file)
                 shutil.copy(src_path, dst_path)
 
 
 def count_tokens_for_file(file_path):
-    with open(file_path, 'r', encoding='utf-8') as f:
+    with open(file_path, "r", encoding="utf-8") as f:
         content = f.read()
 
     # Count tokens using tiktoken
@@ -27,8 +29,9 @@ def count_tokens_for_file(file_path):
 
     return num_tokens
 
+
 def process_json_file(file_path):
-    with open(file_path, 'r', encoding='utf-8') as f:
+    with open(file_path, "r", encoding="utf-8") as f:
         content = f.read()
 
     # Count tokens using tiktoken
@@ -41,7 +44,8 @@ def process_json_file(file_path):
     for field, value in json_data.items():
         field_tokens[field] = len(encoding.encode(str(value)))
 
-    return {'file': os.path.basename(file_path), **field_tokens}
+    return {"file": os.path.basename(file_path), **field_tokens}
+
 
 def count_tokens(json_folder):
     total_files = 0
@@ -65,7 +69,7 @@ def count_tokens(json_folder):
     for result in results:
         total_files += 1
         for field, value in result.items():
-            if field != 'file':
+            if field != "file":
                 if field in each_field_total:
                     each_field_total[field] += value
                 else:
@@ -80,12 +84,12 @@ def count_tokens(json_folder):
     for field_total in each_field_total.values():
         total_tokens += field_total
 
-    all_file = {'file': total_files, 'token': total_tokens}
+    all_file = {"file": total_files, "token": total_tokens}
 
     result = {
-        'each_file_token': each_file_tokens,
-        'each_file_token_total': each_file_tokens_total,
-        'total': all_file
+        "each_file_token": each_file_tokens,
+        "each_file_token_total": each_file_tokens_total,
+        "total": all_file,
     }
 
     return result
@@ -103,8 +107,7 @@ if __name__ == "__main__":
     # Count tokens and save results
     result = count_tokens(ele_files_folder)
     result_file = os.path.join(folder_path, "result.json")
-    with open(result_file, 'w', encoding='utf-8') as result_json:
+    with open(result_file, "w", encoding="utf-8") as result_json:
         json.dump(result, result_json, indent=4)
-        
 
     print("Finish")
